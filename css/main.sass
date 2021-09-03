@@ -1,0 +1,394 @@
+.invicible
+  visibility: hidden !important
+
+.opacity-zero
+  opacity: 0 !important
+
+.hidden
+  display: none !important
+
+
+*
+  box-sizing: border-box
+  outline: none
+  margin: 0
+  padding: 0
+
+  &:active, &:hover, &:focus
+    outline: 0
+    outline-offset: 0
+
+html,
+body
+  height: 100%
+
+body
+  font-family: 'Roboto', sans-serif
+  font-size: 24rem
+  color: white
+  background: #2C3137
+  display: block
+  margin: 0
+  transition: height 1s ease-in-out
+  font-weight: 400
+  @media only screen and (max-width: 650px)
+    font-size: 13rem
+
+a
+  color: inherit
+  text-decoration: none
+
+p
+  margin: 0
+  padding: 0
+
+ul
+  list-style-type: none
+
+input
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  outline: none
+
+textarea
+  -webkit-appearance: none
+
+.wrapper
+  display: flex
+  flex-direction: column
+  position: relative
+  min-height: 100vh
+  margin-top: 93rem
+
+
+.page-wrap
+  position: relative
+
+.content
+  flex: 1 0 auto
+  overflow: hidden
+  position: relative
+  &__modal
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 2000
+
+section
+  padding-left: 390rem
+
+.main
+  &__button
+    background: linear-gradient(91.56deg, #FFBB00 -1%, #FFA700 50%, #FFBB00 104%)
+    background-size: 200% auto
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    border-radius: 5rem
+    border: none
+    cursor: pointer
+    position: relative
+    transition: 1s
+    color: white
+
+    font-weight: bold
+    letter-spacing: 0.1em
+    font-size: 16rem
+
+    &:hover
+      background-position: right center
+
+  &__title
+    text-transform: uppercase
+    color: white
+    font-size: 40rem
+    font-weight: 700
+    position: relative
+    letter-spacing: 0.05em
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: -20rem
+      left: 0
+      width: 90rem
+      height: 6rem
+      background: linear-gradient(90deg, #FFBB00 -13.33%, #FFA700 100%)
+
+
+.header
+  display: flex
+  height: 93rem
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  padding-left: 390rem
+  background: #2C3137
+  z-index: 1000
+
+  &__logo
+    display: block
+    width: 168rem
+    height: 54.12rem
+    margin-right: 92rem
+    margin-top: 32rem
+    & img, svg
+      width: 100%
+
+  &__button
+    width: 156rem
+    height: 31rem
+    font-size: 14rem
+    letter-spacing: 0.02em
+
+  &__phone
+    display: flex
+    flex-direction: column
+    margin-top: 21rem
+    font-size: 20rem
+    align-items: center
+    font-weight: 400
+    & a
+      display: block
+      margin-bottom: 3px
+
+  &__nav
+    margin-top: 51rem
+
+
+.underline
+  text-decoration: none
+  background-image: linear-gradient(white, white)
+  background-position: 100% 100%
+  background-repeat: no-repeat
+  background-size: 0% 2rem
+  transition: background-size 0.25s
+
+  &:hover
+    background-size: 100% 2rem
+    background-position: 0% 100%
+
+
+.nav
+  display: flex
+  margin-right: 92rem
+
+
+  &__link
+    position: relative
+    font-size: 20rem
+    height: fit-content
+
+  & a + a
+    margin-left: 50rem
+    &:before
+      content: ''
+      pointer-events: none
+      position: absolute
+      height: 20rem
+      width: 2px
+      left: -25rem
+      top: 2px
+      background: linear-gradient(90deg, #FFBB00 1.67%, #FFA700 100%)
+
+.top-slider
+  width: 100%
+  height: 760rem
+  color: #232323
+
+  &__item
+    width: 100%
+    height: 100%
+    position: relative
+
+  &__background
+    width: 100%
+    height: 100%
+
+    & img
+      width: 100%
+
+  &__content
+    position: absolute
+    width: 710rem
+    right: 420rem
+    top: 153rem
+    display: flex
+    flex-direction: column
+
+  &__title
+    text-align: right
+    font-size: 70rem
+    font-weight: 900
+    text-transform: uppercase
+    margin-bottom: 24rem
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+
+  &__subtitle
+    text-align: right
+    font-size: 50rem
+    font-weight: 900
+    text-transform: uppercase
+    margin-bottom: 16rem
+
+  &__separator
+    width: 100%
+    height: 1.5px
+    background: #2C3137
+    margin-bottom: 10rem
+
+  &__description
+    display: flex
+    justify-content: flex-end
+    margin-bottom: 40rem
+
+    &__item
+      display: flex
+      font-size: 30rem
+      font-weight: 700
+      align-items: flex-end
+      & .num
+        font-size: 80rem
+        line-height: 70rem
+        margin-right: 5px
+
+      & + .top-slider__description__item
+        margin-left: 20rem
+
+  &__button
+    width: 283rem
+    height: 63rem
+    border-radius: 5rem
+    background: #2C3137
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    color: white
+    font-size: 18rem
+    font-weight: 900
+    letter-spacing: 0.1em
+    border: none
+    cursor: pointer
+    align-self: flex-end
+
+
+.variants
+  width: 100%
+  padding-top: 154rem
+  padding-bottom: 45rem
+
+  &__title
+    margin-bottom: 10rem
+    margin-left: 390rem
+
+  &__content
+    margin: 0 auto
+    width: 1024rem
+    display: flex
+    flex-wrap: wrap
+
+  &__item
+    flex-basis: 25%
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__name
+    width: 170rem
+    text-align: center
+    font-size: 18rem
+    font-weight: 700
+
+
+
+.repair
+  background: #393f47
+  padding-top: 94rem
+  padding-bottom: 154rem
+  position: relative
+  z-index: 1
+
+  &__title
+    margin-bottom: 30rem
+    width: 440rem
+
+  &__button
+    width: 220rem
+    height: 55rem
+
+  &__text
+    width: 520rem
+    margin-bottom: 29rem
+    font-size: 18rem
+    line-height: 1.58
+
+  &__image
+    position: absolute
+    top: -110rem
+    right: 70rem
+    width: 1008rem
+    height: 619rem
+
+    & img
+      width: 100%
+
+  &__background
+    height: 100%
+    width: 410rem
+    position: absolute
+    left: 755rem
+    top: 0
+    background: #2C3137
+    z-index: -1
+
+
+
+
+
+
+
+
+/* FLICKITY */
+
+.flickity-button
+  background: transparent
+  &:hover
+    background: transparent
+  &-icon
+    display: none
+  &.previous:before
+    left: 75rem
+    background: url(../img/icons/slider-arrow-prev.svg)
+    background-size: cover
+  &.next:before
+    background: url(../img/icons/slider-arrow.svg)
+    background-size: cover
+    right: 75rem
+
+.flickity-button:before
+  content: ''
+  position: absolute
+  width: 110rem
+  height: 110rem
+  top: -50%
+
+.flickity-page-dots
+  bottom: 86rem
+  right: 425rem
+  width: max-content
+
+/* dots are lines */
+.flickity-page-dots .dot
+  height: 3px
+  width: 43rem
+  margin: 0
+  border-radius: 0
+  background: white
+  opacity: 1 !important
+
+  &.is-selected
+    background: #2C3137
+
+  & + .dot
+    margin-left: 10rem
+
+
