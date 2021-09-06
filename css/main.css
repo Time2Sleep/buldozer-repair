@@ -612,6 +612,7 @@ section {
   align-items: center;
   justify-content: space-between;
   width: 1110rem;
+  margin: 0 auto;
 }
 .questions__title {
   text-transform: uppercase;
