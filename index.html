@@ -11,12 +11,14 @@
   <link rel="stylesheet" href="css/flickity.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/fm.revealator.jquery.css">
   <script src="js/rem.js"></script>
 
 
   <script src="js/flickity.pkgd.min.js"></script>
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/fm.revealator.jquery.js"></script>
   <script src="js/vue.js"></script>
   <script src='https://www.google.com/recaptcha/api.js'></script>
   <script src="js/main.js"></script>
@@ -176,7 +178,7 @@
       </transition>
 
 
-      <div class="top-slider">
+      <div class="top-slider revealator-slideup">
         <div class="top-slider__item">
           <div class="top-slider__background">
             <img src="img/images/slider-top/first.jpg" alt="">
@@ -248,7 +250,7 @@
         </div>
       </div>
 
-      <div class="variants" id="variants">
+      <div class="variants revealator-slideup" id="variants">
         <h1 class="main__title variants__title">
           С какими видами техники работаем?
         </h1>
@@ -320,7 +322,7 @@
         </div>
       </div>
 
-      <section class="repair">
+      <section class="repair revealator-slideup">
         <h1 class="main__title repair__title">
           Ремонт спецтехники
         </h1>
@@ -335,7 +337,7 @@
         </div>
       </section>
 
-      <section class="offer" id="offer">
+      <section class="offer revealator-slideup" id="offer">
         <div class="offer__block">
           <h1 class="main__title offer__title">
             Что мы предлагаем?
@@ -350,7 +352,7 @@
           <button class="main__button offer__button" @click="openModal">Получить выгодное условие</button>
         </div>
 
-        <div class="offer__block">
+        <div class="offer__block revealator-slideup">
           <div class="offer__table">
             <div class="offer__table-item">
               <div class="offer__number">48</div>
@@ -382,7 +384,7 @@
         <div class="offer__background"></div>
       </section >
 
-      <section class="trust">
+      <section class="trust revealator-slideup">
         <h1 class="main__title trust__title">
           Почему нам доверяют?
         </h1>
@@ -400,7 +402,7 @@
         </div>
       </section>
 
-      <section class="feedback" id="feedback">
+      <section class="feedback revealator-slideup" id="feedback">
         <h1 class="main__title feedback__title">
           Отзывы партнеров
         </h1>
@@ -462,7 +464,7 @@
         </div>
       </section>
 
-      <section class="contacts" id="contacts">
+      <section class="contacts revealator-slideup" id="contacts">
         <div class="contacts__left">
           <h1 class="main__title contacts__title">
 
@@ -531,7 +533,7 @@
       </section>
 
 
-      <div class="questions">
+      <div class="questions revealator-slideup">
         <div class="questions__inner">
           <h1 class="questions__title">ОСТАЛИСЬ ВОПРОСЫ?</h1>
           <button class="questions__button" @click="openModal">ОСТАВИТЬ ЗАЯВКУ</button>

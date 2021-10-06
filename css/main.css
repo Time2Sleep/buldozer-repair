@@ -181,6 +181,8 @@ section {
     padding-left: 10rem;
     align-items: center;
     height: 59rem;
+    justify-content: space-between;
+    padding-right: 13rem;
   }
 }
 .header__logo {
@@ -1050,8 +1052,10 @@ section {
 .feedback .flickity-page-dots .dot + .dot {
   margin-left: 13rem;
 }
-.feedback .flickity-viewport {
-  overflow: visible;
+@media only screen and (max-width: 650px) {
+  .feedback .flickity-viewport {
+    overflow: visible;
+  }
 }
 
 .contacts {
