@@ -63,6 +63,8 @@ textarea
   position: relative
   min-height: 100vh
   margin-top: 93rem
+  @media only screen and (max-width: 650px)
+    margin-top: 59rem
 
 
 .page-wrap
@@ -82,6 +84,8 @@ section
   padding-left: 390rem
   position: relative
   z-index: 1
+  @media only screen and (max-width: 650px)
+    padding-left: 13rem
 
 .main
   &__button
@@ -99,6 +103,9 @@ section
     font-weight: bold
     letter-spacing: 0.1em
     font-size: 16rem
+    @media only screen and (max-width: 650px)
+      font-size: 10rem
+      border-radius: 3rem
 
     &:hover
       background-position: right center
@@ -110,6 +117,8 @@ section
     font-weight: 700
     position: relative
     letter-spacing: 0.05em
+    @media only screen and (max-width: 650px)
+      font-size: 25rem
 
     &:before
       content: ''
@@ -120,6 +129,9 @@ section
       width: 90rem
       height: 6rem
       background: linear-gradient(90deg, #FFBB00 -13.33%, #FFA700 100%)
+      @media only screen and (max-width: 650px)
+        width: 50rem
+        height: 4rem
 
 
 .header
@@ -132,6 +144,11 @@ section
   padding-left: 390rem
   background: #2C3137
   z-index: 1000
+  @media only screen and (max-width: 650px)
+    padding-left: 10rem
+    align-items: center
+    height: 59rem
+
 
   &__logo
     display: block
@@ -142,12 +159,20 @@ section
     & img, svg
       width: 100%
 
+    @media only screen and (max-width: 650px)
+      width: 120rem
+      height: 39rem
+      margin-right: 10rem
+      margin-top: 0
+
   &__button
     width: 156rem
     height: 31rem
     font-size: 14rem
     letter-spacing: 0.02em
     text-transform: unset
+    @media only screen and (max-width: 650px)
+      display: none
 
   &__phone
     display: flex
@@ -159,36 +184,122 @@ section
     & a
       display: block
       margin-bottom: 3px
+    @media only screen and (max-width: 650px)
+      font-size: 13rem
+      margin-top: 0
+      margin-right: 15rem
 
   &__nav
     margin-top: 51rem
 
+  &__burger
+    display: none
+    height: 20rem
+    width: 30rem
+    position: relative
+    @media only screen and (max-width: 650px)
+      display: flex
+
+    &-line
+      width: 100%
+      height: 3px
+      border-radius: 1.5px
+      background: #FFBB00
+      transition: all .25s linear
+
+      &:after
+        content: ''
+        display: block
+        width: 100%
+        height: 3px
+        border-radius: 1.5px
+        background: #FFBB00
+        position: absolute
+        transition: all .25s linear
+        top: 10rem
+        left: 0
+
+      &:before
+        content: ''
+        display: block
+        width: 100%
+        height: 3px
+        border-radius: 1.5px
+        background: #FFBB00
+        position: absolute
+        transition: all .25s linear
+        top: 20rem
+        left: 0
+    &.active .header__burger-line
+      margin-top: 10rem
+      transform: rotate(45deg)
+      &:after
+        opacity: 0
+      &:before
+        top: 0
+        transform: rotate(-90deg)
+
+
 
 .underline
-  text-decoration: none
-  background-image: linear-gradient(white, white)
-  background-position: 100% 100%
-  background-repeat: no-repeat
-  background-size: 0% 2rem
-  transition: background-size 0.25s
+  @media only screen and (min-width: 650px)
+    text-decoration: none
+    background-image: linear-gradient(white, white)
+    background-position: 100% 100%
+    background-repeat: no-repeat
+    background-size: 0% 2rem
+    transition: background-size 0.25s
 
-  &:hover
-    background-size: 100% 2rem
-    background-position: 0% 100%
+    &:hover
+      background-size: 100% 2rem
+      background-position: 0% 100%
 
 
 .nav
   display: flex
   margin-right: 92rem
+  @media only screen and (max-width: 650px)
+    position: fixed
+    right: 0
+    top: 0
+    z-index: 999
+    background: #FEB601
+    margin-right: 0
+    flex-direction: column
+    color: black
+    width: 255rem
+    height: 90vh
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%)
+    text-align: right
+    padding-right: 13rem
+    justify-content: flex-start
+    padding-bottom: 80rem
+    padding-top: 40rem
+    transform: translateY(-120%)
+    transition: transform .3s linear
 
+
+    &.active
+      transform: translateY(0)
+
+  &__mob
+    display: none
+    @media only screen and (max-width: 650px)
+      display: flex
 
   &__link
     position: relative
     font-size: 20rem
     height: fit-content
+    @media only screen and (max-width: 650px)
+      font-size: 15rem
+      margin-bottom: 11rem
 
   & a + a
     margin-left: 50rem
+    @media only screen and (max-width: 650px)
+      margin-left: 0
+
     &:before
       content: ''
       pointer-events: none
@@ -198,11 +309,68 @@ section
       left: -25rem
       top: 2px
       background: linear-gradient(90deg, #FFBB00 1.67%, #FFA700 100%)
+      @media only screen and (max-width: 650px)
+        height: 3px
+        background: black
+        width: 20rem
+        right: 0
+        left: unset
+        top: -6rem
+
+  &__contacts
+    justify-self: flex-end
+    margin-top: auto
+    &__links
+      margin-bottom: 70rem
+      @media only screen and (max-width: 650px)
+        margin-bottom: 20rem
+
+    &__link
+      display: flex
+      align-items: center
+      font-size: 20rem
+      margin-bottom: 10rem
+      @media only screen and (max-width: 650px)
+        font-size: 10rem
+        justify-content: right
+      & svg
+        width: 24rem
+        height: 24rem
+        margin-left: 10rem
+        @media only screen and (max-width: 650px)
+          width: 16rem
+          height: 16rem
+
+    &__addresses
+      margin-bottom: 70rem
+      @media only screen and (max-width: 650px)
+        margin-bottom: 20rem
+      & p
+        margin-bottom: 10rem
+
+      &-title
+        font-weight: bold
+    &__place
+      cursor: pointer
+      @media only screen and (max-width: 650px)
+        display: flex
+        align-items: center
+
+        justify-content: right
+      & svg
+        width: 18rem
+        height: 24rem
+        margin-left: 10rem
+        @media only screen and (max-width: 650px)
+          width: 12rem
+          height: 16rem
 
 .top-slider
   width: 100%
   height: 760rem
   color: #232323
+  @media only screen and (max-width: 650px)
+    height: 191rem
 
   &__item
     width: 100%
@@ -212,9 +380,14 @@ section
   &__background
     width: 100%
     height: 100%
+    @media only screen and (max-width: 650px)
+      overflow: hidden
 
     & img
       width: 100%
+      @media only screen and (max-width: 650px)
+        width: auto
+        height: 100%
 
   &__content
     position: absolute
@@ -223,6 +396,11 @@ section
     top: 153rem
     display: flex
     flex-direction: column
+    @media only screen and (max-width: 650px)
+      width: 200rem
+      right: 13rem
+      top: 35rem
+      align-items: flex-end
 
   &__title
     text-align: right
@@ -231,6 +409,9 @@ section
     text-transform: uppercase
     margin-bottom: 24rem
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    @media only screen and (max-width: 650px)
+      font-size: 20rem
+      margin-bottom: 5rem
 
   &__subtitle
     text-align: right
@@ -238,17 +419,28 @@ section
     font-weight: 900
     text-transform: uppercase
     margin-bottom: 16rem
+    @media only screen and (max-width: 650px)
+      font-size: 16rem
+      width: 150rem
+      margin-bottom: 5rem
+
 
   &__separator
     width: 100%
     height: 1.5px
     background: #2C3137
     margin-bottom: 10rem
+    @media only screen and (max-width: 650px)
+      width: 145rem
+      height: 3px
+
 
   &__description
     display: flex
     justify-content: flex-end
     margin-bottom: 40rem
+    @media only screen and (max-width: 650px)
+      display: none
 
     &__item
       display: flex
@@ -276,34 +468,54 @@ section
     border: none
     cursor: pointer
     align-self: flex-end
+    @media only screen and (max-width: 650px)
+      width: 141rem
+      height: 31rem
+      font-size: 10rem
 
 
 .variants
   width: 100%
   padding-top: 154rem
   padding-bottom: 45rem
+  @media only screen and (max-width: 650px)
+    padding-top: 40rem
+    padding-bottom: 10rem
 
   &__title
     margin-bottom: 10rem
     margin-left: 390rem
+    @media only screen and (max-width: 650px)
+      margin-left: 13rem
 
   &__content
     margin: 0 auto
     width: 1024rem
     display: flex
     flex-wrap: wrap
+    @media only screen and (max-width: 650px)
+      width: 280rem
+      padding: 0 10rem
 
   &__item
     flex-basis: 25%
     display: flex
     flex-direction: column
     align-items: center
+    @media only screen and (max-width: 650px)
+      width: 130rem
+      flex-basis: unset
+      margin-bottom: 10rem
+
 
   &__name
     width: 170rem
     text-align: center
     font-size: 18rem
     font-weight: 700
+    @media only screen and (max-width: 650px)
+      width: 100rem
+      font-size: 13rem
 
 
 
@@ -313,20 +525,31 @@ section
   padding-bottom: 154rem
   position: relative
   z-index: 1
+  @media only screen and (max-width: 650px)
+    padding-top: 46rem
+    padding-bottom: 46rem
 
   &__title
     margin-bottom: 30rem
     width: 440rem
+    @media only screen and (max-width: 650px)
+      width: 100%
 
   &__button
     width: 220rem
     height: 55rem
+    @media only screen and (max-width: 650px)
+      width: 141rem
+      height: 31rem
 
   &__text
     width: 520rem
     margin-bottom: 29rem
     font-size: 18rem
     line-height: 1.58
+    @media only screen and (max-width: 650px)
+      width: 100%
+      font-size: 10rem
 
   &__image
     position: absolute
@@ -334,6 +557,8 @@ section
     right: 70rem
     width: 1008rem
     height: 619rem
+    @media only screen and (max-width: 650px)
+      display: none
 
     & img
       width: 100%
@@ -346,12 +571,17 @@ section
     top: 0
     background: #2C3137
     z-index: -1
+    @media only screen and (max-width: 650px)
+      left: 169rem
+      width: 118rem
 
 
 .offer
   padding-top: 261rem
-  padding-bottom: 304rem
   display: flex
+  @media only screen and (max-width: 650px)
+    padding-top: 96rem
+    width: 100%
 
   &__block + .offer__block
     margin-left: 55rem
@@ -359,16 +589,25 @@ section
   &__title
     width: 331rem
     margin-bottom: 20rem
+    @media only screen and (max-width: 650px)
+      width: 90%
 
   &__points
     list-style-position: outside
     width: 482rem
     font-size: 18rem
     margin-bottom: 46rem
+    @media only screen and (max-width: 650px)
+      width: 200rem
+      font-size: 10rem
+      margin-bottom: 24rem
+
     & li
       display: flex
       align-items: center
       margin-bottom: 15rem
+      @media only screen and (max-width: 650px)
+        margin-bottom: 9rem
 
     & li:before
       content: ''
@@ -377,20 +616,44 @@ section
       height: 15rem
       background: linear-gradient(107.74deg, #FFBB00 -10.69%, #FFA700 127.78%)
       margin-right: 20rem
+      @media only screen and (max-width: 650px)
+        width: 9rem
+        height: 9rem
+        min-width: 9rem
+        margin-right: 9rem
 
   &__button
     width: 362rem
     height: 55rem
+    @media only screen and (max-width: 650px)
+      width: 227rem
+      height: 31rem
   &__table
     width: 686.25rem
     height: 366rem
     display: flex
     flex-wrap: wrap
+    @media only screen and (max-width: 650px)
+      display: none
+      width: 80rem
+      height: 195rem
+      flex-direction: column
+      position: absolute
+      right: 0
+      top: 95rem
+    &.mob
+      display: none
+      @media only screen and (max-width: 650px)
+        display: flex
+
     &-item
       width: 33.333%
       height: 50%
       background: linear-gradient(119.59deg, #FFBB00 2.43%, #FFA700 95%)
       overflow: hidden
+      @media only screen and (max-width: 650px)
+        width: 81rem
+        height: 65rem
 
       & img
         width: 102%
@@ -401,10 +664,17 @@ section
     margin-bottom: 21rem
     margin-top: 25rem
     text-align: center
+    @media only screen and (max-width: 650px)
+      margin-top: 5rem
+      font-size: 25rem
+      margin-bottom: 0
 
   &__text
     font-size: 18rem
     text-align: center
+    @media only screen and (max-width: 650px)
+      font-size: 10rem
+
 
   &__background
     position: absolute
@@ -414,23 +684,41 @@ section
     left: 738rem
     top: 136rem
     z-index: -1
+    @media only screen and (max-width: 650px)
+      top: 50rem
+      left: 170rem
+      height: 349rem
 
 
 .trust
+
+  margin-top: 304rem
   padding-top: 80rem
   height: 558rem
+  @media only screen and (max-width: 650px)
+    margin-top: 84rem
+    padding-top: 31rem
+    height: auto
+    padding-bottom: 25rem
 
   &__title
     margin-bottom: 30rem
+    @media only screen and (max-width: 650px)
+      margin-bottom: 23rem
 
   &__points
     width: 482rem
     font-size: 24rem
+    @media only screen and (max-width: 650px)
+      width: 100%
+      font-size: 10rem
     & li
       display: flex
       align-items: center
       margin-bottom: 43rem
       color: rgba(255, 255, 255, 0.8)
+      @media only screen and (max-width: 650px)
+        margin-bottom: 17rem
 
     & li:before
       content: ''
@@ -439,6 +727,11 @@ section
       height: 15rem
       background: linear-gradient(107.74deg, #FFBB00 -10.69%, #FFA700 127.78%)
       margin-right: 39rem
+      @media only screen and (max-width: 650px)
+        width: 9rem
+        height: 9rem
+        min-width: 9rem
+        margin-right: 9rem
 
   &__background
     position: absolute
@@ -455,6 +748,8 @@ section
     height: 683rem
     bottom: -40rem
     right: 0
+    @media only screen and (max-width: 650px)
+      display: none
 
     & img
       width: 100%
@@ -463,12 +758,18 @@ section
 .feedback
   padding-top: 135rem
   padding-bottom: 111rem
+  @media only screen and (max-width: 650px)
+    padding-top: 78rem
+    padding-bottom: 36rem
 
   &__title
     margin-bottom: 30rem
 
   &__wrapper
     width: 1110rem
+    @media only screen and (max-width: 650px)
+      width: 254rem
+      margin-left: 12rem
 
   &__item
     width: 350rem
@@ -477,6 +778,16 @@ section
     padding: 25rem
 
     margin-right: 30rem
+    @media only screen and (max-width: 650px)
+      width: 253rem
+      height: 127rem
+      border-radius: 4px
+      padding: 9rem
+      margin-right: 13rem
+      filter: blur(4px)
+
+      &.is-selected
+        filter: unset
 
   &__header
     margin-bottom: 20rem
@@ -487,17 +798,26 @@ section
   &__name
     font-size: 24rem
     font-weight: bold
+    @media only screen and (max-width: 650px)
+      font-size: 20rem
+
 
   &__date
     font-size: 12rem
+    @media only screen and (max-width: 650px)
+      font-size: 10rem
 
   &__text
     font-size: 14rem
+    @media only screen and (max-width: 650px)
+      font-size: 10rem
 
   & .flickity-page-dots
     bottom: -35rem
     right: unset
     width: 100%
+    @media only screen and (max-width: 650px)
+      display: none
   & .flickity-page-dots .dot
     height: 3px
     width: 55rem
@@ -512,32 +832,47 @@ section
     & + .dot
       margin-left: 13rem
 
-
+  & .flickity-viewport
+    overflow: visible
 
 .contacts
   display: flex
   padding-top: 20rem
   padding-bottom: 149rem
   font-size: 20rem
+  @media only screen and (max-width: 650px)
+    flex-direction: column
+    font-size: 10rem
+    padding-bottom: 88rem
+
   &__title
     margin-bottom: 30rem
 
 
   &__links
     margin-bottom: 70rem
+    @media only screen and (max-width: 650px)
+      margin-bottom: 20rem
 
   &__link
     display: flex
     align-items: center
     font-size: 20rem
     margin-bottom: 10rem
+    @media only screen and (max-width: 650px)
+      font-size: 10rem
     & svg
       width: 24rem
       height: 24rem
       margin-right: 10rem
+      @media only screen and (max-width: 650px)
+        width: 16rem
+        height: 16rem
 
   &__addresses
     margin-bottom: 70rem
+    @media only screen and (max-width: 650px)
+      margin-bottom: 20rem
     & p
       margin-bottom: 10rem
 
@@ -545,13 +880,25 @@ section
       font-weight: bold
   &__place
     cursor: pointer
+    @media only screen and (max-width: 650px)
+      display: flex
+      align-items: center
     & svg
       width: 18rem
       height: 24rem
       margin-right: 10rem
+      @media only screen and (max-width: 650px)
+        width: 12rem
+        height: 16rem
   &__button
     width: 220rem
     height: 55rem
+    @media only screen and (max-width: 650px)
+      width: 141rem
+      height: 31rem
+      position: absolute
+      right: 13rem
+      top: 170rem
 
   &__background
     position: absolute
@@ -569,6 +916,13 @@ section
     bottom: 149rem
     right: 0
     z-index: 10
+    @media only screen and (max-width: 650px)
+      position: static
+      bottom: unset
+      right: unset
+      width: 320rem
+      height: 300rem
+      transform: translateX(-13rem)
 
     & iframe
       width: 100% !important
@@ -579,6 +933,8 @@ section
 .questions
   background: linear-gradient(90.19deg, #FFBB00 3.21%, #FFA700 96.09%)
   height: 142rem
+  @media only screen and (max-width: 650px)
+    height: 121rem
 
   &__inner
     height: 100%
@@ -587,11 +943,20 @@ section
     justify-content: space-between
     width: 1110rem
     margin: 0 auto
+    @media only screen and (max-width: 650px)
+      width: 100%
+      flex-direction: column
+      align-items: center
+      justify-content: unset
+      padding-top: 20rem
 
   &__title
     text-transform: uppercase
     font-size: 40rem
     font-weight: bold
+    @media only screen and (max-width: 650px)
+      font-size: 25rem
+      margin-bottom: 20rem
 
   &__button
     cursor: pointer
@@ -605,14 +970,27 @@ section
     letter-spacing: unset
     font-size: 16rem
     font-weight: bold
+    @media only screen and (max-width: 650px)
+      font-size: 10rem
+      width: 141rem
+      height: 31rem
 
 .footer
   width: 100%
   height: 298rem
   padding-top: 52rem
+
+  @media only screen and (max-width: 650px)
+    padding: 31rem 13rem
+    height: auto
   &__logo
     width: 160rem
     height: 46rem
+
+    @media only screen and (max-width: 650px)
+      width: 121rem
+      height: 39rem
+
     & svg
       width: 100%
       height: 100%
@@ -620,6 +998,8 @@ section
   &__content
     margin: 0 auto
     width: 1110rem
+    @media only screen and (max-width: 650px)
+      width: 100%
 
   &__header
     display: flex
@@ -627,6 +1007,8 @@ section
     align-items: center
     position: relative
     margin-bottom: 39rem
+    @media only screen and (max-width: 650px)
+      margin-bottom: 17rem
 
   &__separator
     width: 100%
@@ -638,36 +1020,56 @@ section
     width: 220rem
     height: 55rem
     letter-spacing: unset
+    @media only screen and (max-width: 650px)
+      width: 141rem
+      height: 31rem
 
   &__credentials
     display: flex
     justify-content: space-between
     font-size: 14rem
     color: rgba(255, 255, 255, 0.8)
+    @media only screen and (max-width: 650px)
+      flex-direction: column
+      font-size: 10rem
 
   &__copyright
     font-size: 15rem
     max-width: 300rem
+    @media only screen and (max-width: 650px)
+      margin-bottom: 10rem
+      font-size: 10rem
 
   &__contacts
     width: 300rem
+    @media only screen and (max-width: 650px)
+      margin-bottom: 0rem
+      width: 100%
 
   &__address
     margin-bottom: 10rem
 
   &__email
     margin-bottom: 16rem
+    @media only screen and (max-width: 650px)
+      margin-bottom: 10rem
 
   &__tel
     color: white
+    @media only screen and (max-width: 650px)
+      margin-bottom: 10rem
 
   &__phones
     display: flex
     justify-content: space-between
+    @media only screen and (max-width: 650px)
+      flex-direction: column
 
   &__privacy
     text-decoration: underline
     width: 150rem
+    @media only screen and (max-width: 650px)
+      margin-bottom: 10rem
 
   &__socials
     display: flex
@@ -697,6 +1099,21 @@ section
   z-index: 10000
   background: rgba(44, 49, 55, 0.7)
   backdrop-filter: blur(8px)
+  @media only screen and (max-width: 650px)
+    width: 94%
+    margin-left: 3%
+
+  &__privacy
+    font-size: 12rem
+    width: 475rem
+    color: #232323
+    @media only screen and (max-width: 650px)
+      width: 100%
+      font-size: 8rem
+
+    & a
+      text-decoration: underline
+
 
   &__content
     width: 710rem
@@ -709,6 +1126,9 @@ section
     flex-direction: column
     align-items: center
     position: relative
+    @media only screen and (max-width: 650px)
+      width: 100%
+      padding: 62rem 20rem 20rem
 
   &__title
     font-size: 40rem
@@ -716,6 +1136,9 @@ section
     text-align: center
     margin-bottom: 22rem
     color: #232323
+    @media only screen and (max-width: 650px)
+      font-size: 23rem
+      margin-bottom: 4rem
 
   &__text
     font-size: 18rem
@@ -723,6 +1146,10 @@ section
     width: 470rem
     margin-bottom: 50rem
     color: #232323
+    @media only screen and (max-width: 650px)
+      width: 100%
+      font-size: 10rem
+      margin-bottom: 13rem
 
   &__input
     width: 475rem
@@ -733,10 +1160,17 @@ section
     box-sizing: border-box
     border-radius: 5rem
     font-size: 20rem
+    @media only screen and (max-width: 650px)
+      width: 100%
+      font-size: 13rem
+      margin-bottom: 22rem
+      padding: 9rem
 
     &::placeholder
       color: rgba(35, 35, 35, 0.5)
       font-size: 18rem
+      @media only screen and (max-width: 650px)
+        font-size: 10rem
 
     &.error
       color: darkred
@@ -758,8 +1192,14 @@ section
     font-size: 16rem
     font-weight: bold
 
+    margin-bottom: 20rem
+    @media only screen and (max-width: 650px)
+      width: 100%
+      height: 31rem
+      font-size: 10rem
+
   &__captcha
-    margin-bottom: 67rem
+    margin-bottom: 39rem
     &.error
       border: 2px solid darkred
   &__close
@@ -770,6 +1210,9 @@ section
     right: 18rem
     width: 29rem
     height: 29rem
+    @media only screen and (max-width: 650px)
+      width: 23rem
+      height: 23rem
     & svg, img
       width: 100%
       height: 100%
@@ -791,6 +1234,9 @@ section
     background-size: cover
     right: 75rem
 
+  @media only screen and (max-width: 650px)
+    display: none
+
 .flickity-button:before
   content: ''
   position: absolute
@@ -802,6 +1248,9 @@ section
   bottom: 86rem
   right: 425rem
   width: max-content
+  @media only screen and (max-width: 650px)
+    right: 13rem
+    bottom: 5rem
 
 /* dots are lines */
 .flickity-page-dots .dot
@@ -811,13 +1260,16 @@ section
   border-radius: 0
   background: white
   opacity: 1 !important
+  @media only screen and (max-width: 650px)
+    width: 23rem
 
   &.is-selected
     background: #2C3137
 
   & + .dot
     margin-left: 10rem
-
+    @media only screen and (max-width: 650px)
+      margin-left: 5rem
 
 
 .fade-enter-active, .fade-leave-active
