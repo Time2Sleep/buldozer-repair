@@ -27,15 +27,17 @@
  SOFTWARE.
  */
 
-
+let effects_padding = -300
 var Revealator = typeof Revealator !== 'undefined' ? Revealator : {};
-
+if (window.innerWidth < 650) {
+  effects_padding = -600
+}
 $(function () {
 	Revealator = $.extend({}, {
 		timer:           null,
 		busy:            false,
 		scroll_padding:  0,
-		effects_padding: -300,
+		effects_padding: effects_padding,
 		refresh:         function () {}
 	}, typeof Revealator !== 'undefined' ? Revealator : {});
 
@@ -48,7 +50,7 @@ $(function () {
 		var window_bottom = $window.height() - Revealator.effects_padding;
 		var document_top = Revealator.scroll_padding;
 		var document_bottom = $document.height() - Revealator.scroll_padding;
-		
+
 		if ($window.scrollTop() === 0) {
 			if (!$body.hasClass('at-top')) {
 				$body.addClass('at-top').removeClass('at-bottom').removeClass('near-top').removeClass('near-bottom');
@@ -70,7 +72,7 @@ $(function () {
 				$body.removeClass('at-top').removeClass('at-bottom').removeClass('near-top').removeClass('near-bottom');
 			}
 		}
-		
+
 		$('*[class*="revealator"]').each(function () {
 			i++;
 			var element = this;

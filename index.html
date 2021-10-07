@@ -464,7 +464,7 @@
         </div>
       </section>
 
-      <section class="contacts " id="contacts">
+      <section class="contacts revealator-slideup" id="contacts">
         <div class="contacts__left">
           <h1 class="main__title contacts__title">
 
@@ -539,7 +539,7 @@
 
 
         </div>
-        <div class="contacts__map revealator-slideup" >
+        <div class="contacts__map " >
           <transition name="fade" v-for="(city,index) in cities">
             <iframe v-if="mapID === index" :src="city.map" width="690" height="400" frameborder="0"></iframe>
           </transition>
