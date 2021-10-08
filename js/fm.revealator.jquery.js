@@ -27,7 +27,7 @@
  SOFTWARE.
  */
 
-let effects_padding = -300
+let effects_padding = -400
 var Revealator = typeof Revealator !== 'undefined' ? Revealator : {};
 if (window.innerWidth < 650) {
   effects_padding = -600

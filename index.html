@@ -153,7 +153,7 @@
 
       <transition name="fade">
         <div class="modal" v-if="showModal">
-          <div class="modal__content">
+          <div class="modal__content" v-if="!thanks">
             <h1 class="modal__title">ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</h1>
             <p class="modal__text">Наш специалист перезвонит вам, чтобы рассказать о компании и ответит на возникшие вопросы</p>
             <input type="text" name="name" class="modal__input" placeholder="Имя" >
@@ -169,6 +169,19 @@
               Нажимая на кнопку, Вы соглашаетесь на обработку Ваших персональных
               данных в соответствии с <a href="#">политикой конфиденциальности</a>. Все поля обязательны для заполнения.
             </div>
+            <div class="modal__close" @click="showModal = false">
+              <img src="img/icons/close.svg" alt="">
+
+            </div>
+          </div>
+
+          <div class="modal__content" v-if="thanks">
+            <h1 class="modal__title">Спасибо!</h1>
+            <p class="modal__text">Ваш запрос принят. Наши специалисты свяжутся с Вами в ближайшее время.</p>
+
+            <button class="modal__submit" @click="showModal = false">
+              Закрыть
+            </button>
             <div class="modal__close" @click="showModal = false">
               <img src="img/icons/close.svg" alt="">
 
@@ -680,6 +693,7 @@ let mainVueBlock = new Vue({
     mapID: 0,
     showModal: false,
     isMobile: false,
+    thanks: false,
     cities: [
       {
         name: 'Набережные Челны',
@@ -719,7 +733,7 @@ let mainVueBlock = new Vue({
       adaptiveHeight: true,
       autoPlay: 5000,
       groupCells: groupCells,
-      prevNextButtons: false
+      prevNextButtons: false,
     });
   },
   methods: {
@@ -728,7 +742,7 @@ let mainVueBlock = new Vue({
       document.querySelector('.nav__mob').classList.toggle('active');
     },
     openModal(){
-
+      this.fanks = false;
       this.showModal = true;
       setTimeout(() => {
         $("#phone").mask("+7 (999) 999-99-99");
@@ -759,7 +773,9 @@ let mainVueBlock = new Vue({
         document.querySelector('.modal__captcha').classList.remove('error');
       }
       if(!error){
-        console.log("no errors");
+
+        this.thanks = true;
+        console.log("form submitted");
       }
     }
   }
