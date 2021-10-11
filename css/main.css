@@ -467,6 +467,12 @@ section {
   width: 100%;
   height: 100%;
   position: relative;
+  height: 760rem;
+}
+@media only screen and (max-width: 650px) {
+  .top-slider__item {
+    height: 191rem;
+  }
 }
 .top-slider__background {
   width: 100%;
@@ -644,6 +650,12 @@ section {
     width: 100rem;
     font-size: 13rem;
   }
+}
+.variants__icon {
+  width: 100%;
+}
+.variants__icon img {
+  width: 100%;
 }
 
 .repair {
