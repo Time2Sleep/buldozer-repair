@@ -4,11 +4,11 @@ function onRem () {
 
   switch (true) {
     case (iw > 650):
-      document.documentElement.style.fontSize = iw / 1920 + 'px'
-      break
+      document.documentElement.style.fontSize = iw / 1920 + 'px';
+      break;
     case (iw < 650):
-      document.documentElement.style.fontSize = iw / 320 + 'px'
-      break
+      document.documentElement.style.fontSize = iw / 320 + 'px';
+      break;
   }
 }
 
