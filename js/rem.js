@@ -12,6 +12,6 @@ function onRem () {
   }
 }
 
-window.addEventListener('resize', onRem)
-
+window.addEventListener('resize', onRem);
+window.addEventListener("orientationchange", onRem);
 onRem()
