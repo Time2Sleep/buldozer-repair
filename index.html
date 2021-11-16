@@ -155,7 +155,7 @@
       <transition name="fade">
         <div class="modal" v-if="showModal">
           <div class="modal__content" v-if="!thanks">
-            <h1 class="modal__title">ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</h1>
+            <p class="modal__title">ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</p>
             <p class="modal__text">Наш специалист перезвонит вам, чтобы рассказать о компании и ответит на возникшие вопросы</p>
             <input type="text" name="name" class="modal__input" placeholder="Имя" >
             <input type="text" name="phone" class="modal__input" placeholder="Телефон" id="phone"
@@ -171,20 +171,20 @@
               данных в соответствии с <a href="#">политикой конфиденциальности</a>. Все поля обязательны для заполнения.
             </div>
             <div class="modal__close" @click="showModal = false">
-              <img src="img/icons/close.svg" alt="">
+              <img title="img" width="10" height="auto" src="img/icons/close.svg" alt="">
 
             </div>
           </div>
 
           <div class="modal__content" v-if="thanks">
-            <h1 class="modal__title">Спасибо!</h1>
+            <p class="modal__title">Спасибо!</p>
             <p class="modal__text">Ваш запрос принят. Наши специалисты свяжутся с Вами в ближайшее время.</p>
 
             <button class="modal__submit" @click="showModal = false">
               Закрыть
             </button>
             <div class="modal__close" @click="showModal = false">
-              <img src="img/icons/close.svg" alt="">
+              <img title="img" width="10" height="auto" src="img/icons/close.svg" alt="">
 
             </div>
           </div>
@@ -195,10 +195,10 @@
       <div class="top-slider revealator-slideup">
         <div class="top-slider__item">
           <div class="top-slider__background">
-            <img src="img/images/slider-top/first.jpg" alt="">
+            <img title="img" width="10" height="auto" src="img/images/slider-top/first.jpg" alt="">
           </div>
           <div class="top-slider__content">
-            <h1 class="top-slider__title">Вернем в строй спецтехнику</h1>
+            <p class="top-slider__title">Вернем в строй спецтехнику</p>
             <h3 class="top-slider__subtitle">ремонт спецтехники</h3>
             <div class="top-slider__separator"></div>
             <div class="top-slider__description">
@@ -218,10 +218,10 @@
         </div>
         <div class="top-slider__item">
           <div class="top-slider__background">
-            <img src="img/images/slider-top/first.jpg" alt="">
+            <img title="img" width="10" height="auto" src="img/images/slider-top/first.jpg" alt="">
           </div>
           <div class="top-slider__content">
-            <h1 class="top-slider__title">Вернем в строй спецтехнику</h1>
+            <p class="top-slider__title">Вернем в строй спецтехнику</p>
             <h3 class="top-slider__subtitle">ремонт спецтехники</h3>
             <div class="top-slider__separator"></div>
             <div class="top-slider__description">
@@ -241,10 +241,10 @@
         </div>
         <div class="top-slider__item">
           <div class="top-slider__background">
-            <img src="img/images/slider-top/first.jpg" alt="">
+            <img title="img" width="10" height="auto" src="img/images/slider-top/first.jpg" alt="">
           </div>
           <div class="top-slider__content">
-            <h1 class="top-slider__title">Вернем в строй спецтехнику</h1>
+            <p class="top-slider__title">Вернем в строй спецтехнику</p>
             <h3 class="top-slider__subtitle">ремонт спецтехники</h3>
             <div class="top-slider__separator"></div>
             <div class="top-slider__description">
@@ -265,13 +265,13 @@
       </div>
 
       <div class="variants revealator-slideup" id="variants">
-        <h1 class="main__title variants__title">
+        <p class="main__title variants__title">
           С какими видами техники работаем?
-        </h1>
+        </p>
         <div class="variants__content">
           <div class="variants__item">
             <div class="variants__icon">
-              <img src="img/icons/variants/1.svg">
+              <img title="img" width="10" height="auto" src="img/icons/variants/1.svg" alt="">
             </div>
             <div class="variants__name">
               Погрузчики
@@ -279,7 +279,7 @@
           </div>
           <div class="variants__item">
             <div class="variants__icon">
-              <img src="img/icons/variants/2.svg">
+              <img title="img" width="10" height="auto" src="img/icons/variants/2.svg" alt="">
             </div>
             <div class="variants__name">
               Экскаваторы
@@ -287,7 +287,7 @@
           </div>
           <div class="variants__item">
             <div class="variants__icon">
-              <img src="img/icons/variants/3.svg">
+              <img title="img" width="10" height="auto" src="img/icons/variants/3.svg" alt="">
             </div>
             <div class="variants__name">
               Грейдеры
@@ -295,7 +295,7 @@
           </div>
           <div class="variants__item">
             <div class="variants__icon">
-              <img src="img/icons/variants/4.svg">
+              <img title="img" width="10" height="auto" src="img/icons/variants/4.svg" alt="">
             </div>
             <div class="variants__name">
               Асфальтовые катки
@@ -303,7 +303,7 @@
           </div>
           <div class="variants__item">
             <div class="variants__icon">
-              <img src="img/icons/variants/5.svg">
+              <img title="img" width="10" height="auto" src="img/icons/variants/5.svg" alt="">
             </div>
             <div class="variants__name">
               Бульдозеры
@@ -311,7 +311,7 @@
           </div>
           <div class="variants__item">
             <div class="variants__icon">
-              <img src="img/icons/variants/6.svg">
+              <img title="img" width="10" height="auto" src="img/icons/variants/6.svg" alt="">
             </div>
             <div class="variants__name">
               Гусеничные тракторы
@@ -319,7 +319,7 @@
           </div>
           <div class="variants__item">
             <div class="variants__icon">
-              <img src="img/icons/variants/7.svg">
+              <img title="img" width="10" height="auto" src="img/icons/variants/7.svg" alt="">
             </div>
             <div class="variants__name">
               ДГУ
@@ -327,7 +327,7 @@
           </div>
           <div class="variants__item">
             <div class="variants__icon">
-              <img src="img/icons/variants/8.svg">
+              <img title="img" width="10" height="auto" src="img/icons/variants/8.svg" alt="">
             </div>
             <div class="variants__name">
               Грунтовые катки
@@ -337,9 +337,9 @@
       </div>
 
       <section class="repair revealator-slideup">
-        <h1 class="main__title repair__title">
+        <p class="main__title repair__title">
           Ремонт спецтехники
-        </h1>
+        </p>
         <div class="repair__text">
           Боль клиентов какую задачу закроем Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
         </div>
@@ -347,15 +347,15 @@
 
         <div class="repair__background"></div>
         <div class="repair__image">
-          <img src="img/images/buldozer.png" alt="">
+          <img title="img" width="10" height="auto" src="img/images/buldozer.png" alt="">
         </div>
       </section>
 
       <section class="offer revealator-slideup" id="offer">
         <div class="offer__block">
-          <h1 class="main__title offer__title">
+          <p class="main__title offer__title">
             Что мы предлагаем?
-          </h1>
+          </p>
           <ul class="offer__points">
             <li>Сезонная подготовка и обслуживание</li>
             <li>Ремонт ходовой части любой гусеничной техники</li>
@@ -372,25 +372,25 @@
               <div class="offer__number">48</div>
               <div class="offer__text">офисов<br>в Европе и СНГ</div>
             </div>
-            <div class="offer__table-item"><img src="img/images/offer-table/1.jpg" alt=""></div>
+            <div class="offer__table-item"><img title="img" width="10" height="auto" src="img/images/offer-table/1.jpg" alt=""></div>
             <div class="offer__table-item">
               <div class="offer__number">361</div>
               <div class="offer__text">грузовиков<br>Volvo, Scania</div>
             </div>
-            <div class="offer__table-item"><img src="img/images/offer-table/2.jpg" alt=""></div>
+            <div class="offer__table-item"><img title="img" width="10" height="auto" src="img/images/offer-table/2.jpg" alt=""></div>
             <div class="offer__table-item">
               <div class="offer__number">1500</div>
               <div class="offer__text">сотрудников<br>профессионалов</div>
             </div>
-            <div class="offer__table-item"><img src="img/images/offer-table/3.jpg" alt=""></div>
+            <div class="offer__table-item"><img title="img" width="10" height="auto" src="img/images/offer-table/3.jpg" alt=""></div>
           </div>
           <div class="offer__table mob">
-            <div class="offer__table-item"><img src="img/images/offer-table/1.jpg" alt=""></div>
+            <div class="offer__table-item"><img title="img" width="10" height="auto" src="img/images/offer-table/1.jpg" alt=""></div>
             <div class="offer__table-item">
               <div class="offer__number">48</div>
               <div class="offer__text">офисов<br>в Европе и СНГ</div>
             </div>
-            <div class="offer__table-item"><img src="img/images/offer-table/2.jpg" alt=""></div>
+            <div class="offer__table-item"><img title="img" width="10" height="auto" src="img/images/offer-table/2.jpg" alt=""></div>
           </div>
 
         </div>
@@ -399,9 +399,9 @@
       </section >
 
       <section class="trust revealator-slideup">
-        <h1 class="main__title trust__title">
+        <p class="main__title trust__title">
           Почему нам доверяют?
-        </h1>
+        </p>
         <ul class="trust__points">
           <li>Выездные технические бригады</li>
           <li>Круглосуточный эвакуатор</li>
@@ -412,14 +412,14 @@
 
         <div class="trust__background"></div>
         <div class="trust__image">
-          <img src="img/images/trust-bg.png" alt="">
+          <img title="img" width="10" height="auto" src="img/images/trust-bg.png" alt="">
         </div>
       </section>
 
       <section class="feedback revealator-slideup" id="feedback">
-        <h1 class="main__title feedback__title">
+        <p class="main__title feedback__title">
           Отзывы партнеров
-        </h1>
+        </p>
         <div class="feedback__wrapper">
           <div class="feedback__item">
             <div class="feedback__header">
@@ -566,7 +566,7 @@
 
       <div class="questions revealator-slideup">
         <div class="questions__inner">
-          <h1 class="questions__title">ОСТАЛИСЬ ВОПРОСЫ?</h1>
+          <p class="questions__title">ОСТАЛИСЬ ВОПРОСЫ?</p>
           <button class="questions__button" @click="openModal">ОСТАВИТЬ ЗАЯВКУ</button>
         </div>
 
